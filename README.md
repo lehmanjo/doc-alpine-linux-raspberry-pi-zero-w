@@ -14,7 +14,7 @@ Credit goes to various authors of content on the Alpine Linux Wiki.
 
 #### Step 1 - Partitioning the SD card
 
-Describes steps of partitioning the SD card for a full installation with boot, swap and root partitions.  Assumes you have access to an existing linux or Alpine Linux system.  
+Describes steps for partitioning the SD card for a full installation with boot, swap and root partitions.  Assumes you have access to an existing linux or Alpine Linux system.  
 
 Read steps [here](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/partition.md).
 
