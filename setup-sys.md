@@ -43,9 +43,15 @@ Now a number of manual steps are required as outlined on various Alpine Wiki pag
 * https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi
 * https://wiki.alpinelinux.org/wiki/Raspberry_Pi_Zero_W_-_Installation
  
+ Reminder
+ * boot filesystem is mmcblk0p1 (always mounted on /media/mmcblk0p1)
+ * swap filesystem is mmcblk0p2 (not mounted during installation)
+ * root filesystem is mmcblk0p3 (temporarily mounted on /mnt)
  
-- one
-- two
+Summary of steps
+1. move the updated initramfs/boot files to the boot partition.
+2. adjust links to boot partition
+3. tweak fstab on root filesystem
 
  
 ```
