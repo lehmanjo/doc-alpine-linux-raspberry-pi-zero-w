@@ -124,3 +124,26 @@ Calling ioctl() to re-read partition table
 # sync
 
 ```
+
+### Format partitions (linux)
+
+```
+# mkdosfs -F 32 /dev/mmcblk0p1
+mkfs.fat 4.1 (2017-01-24)
+```
+
+```
+# mkswap /dev/mmcblk0p2
+Setting up swapspace version 1, size = 2147479552 bytes
+...
+```
+
+```
+# mkfs.ext4 /dev/mmcblk0p3
+mke2fs 1.45.6 (20-Mar-2020)
+...
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done
+```
