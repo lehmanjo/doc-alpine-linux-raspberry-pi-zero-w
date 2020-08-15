@@ -147,3 +147,6 @@ Writing inode tables: done
 Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 ```
+
+
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/README.md).
