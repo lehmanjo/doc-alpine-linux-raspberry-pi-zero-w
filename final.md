@@ -190,3 +190,13 @@ $ sudo apk add clang cmake make llvm clang-dev
 $ sudo apk add gcc g++ cmake make gdb
 ```
 
+##### RUST
+
+Rust for "armhf", and Alpine Linux is easiest downloaded using "apk".
+
+* https://www.rust-lang.org/
+
+```
+$ sudo apk add rust rust-src rust-gdb rust-doc rust-dbg gcc g++ cmake make gdb cargo cargo-bash-completions cargo-doc
+```
+
