@@ -95,7 +95,67 @@ Linux localhost 5.4.57-0-rpi #1-Alpine Sat Aug 8 17:24:11 UTC 2020 armv6l Linux
 ```
 
 
+### Fixup Config
 
+You can either re-run "setup-alpine" or run the specific configuration scripts you want.
+
+* __setup-timezone__ to change to different timezone.  Default timezone during installation was UTC
+* __setup-hostname__ to change hostname from localhost
+* __setup-dns__ to setup a DNS domain name for your Raspberry Pi
+
+
+### Optional
+
+#### Add Unprivileged User
+
+
+Install useful packages
+
+```
+# apk add bash sudo
+(1/3) Installing readline (8.0.4-r0)
+(2/3) Installing bash (5.0.18-r0)
+Executing bash-5.0.18-r0.post-install
+(3/3) Installing sudo (1.9.1-r0)
+Executing busybox-1.32.0-r1.trigger
+OK: 109 MiB in 59 packages
+```
+
+Add groups and user (e.g. username "me")
+```
+# addgroup sudo
+# addgroup -g 1000 me
+# adduser -s /bin/bash -h /home/me -G me me
+Changing password for me
+New password:
+Retype password:
+passwd: password for me changed by root
+...
+# addgroup me sudo
+...
+# grep sudo /etc/group
+sudo:x:1000:me
+```
+
+Edit /etc/sudoers to enable sudo group.
+
+```
+# vi /etc/sudoers
+...
+# grep ^%sudo /etc/sudoers
+%sudo ALL=(ALL) ALL
+```
+
+Remove remote root login via SSH.
+
+```
+# grep ^PermitRoot /etc/ssh/sshd_config
+PermitRootLogin yes
+...
+localhost:~# vi /etc/ssh/sshd_config
+```
+
+Reboot and login as new user (e.g. "me").
 
 
 
