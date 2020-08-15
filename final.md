@@ -172,5 +172,21 @@ OK: 14706 distinct packages available
 OK: 109 MiB in 59 packages
 ```
 
+#### Add Compilers
 
+##### CLANG C/C++
+
+* https://clang.llvm.org/
+
+```
+$ sudo apk add clang cmake make
+```
+
+##### GNU C/C++
+
+* https://gcc.gnu.org/
+
+```
+$ sudo apk add gcc g++ cmake make gdb
+```
 
