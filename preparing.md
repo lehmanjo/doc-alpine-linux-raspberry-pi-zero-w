@@ -1,6 +1,6 @@
 # Preparing the SD card (linux)
 
-Download the right tarball from https://alpinelinux.org/downloads/.  It should be **armhf** for Raspberry PI.
+### Download the right tarball from https://alpinelinux.org/downloads/.  It should be **armhf** for Raspberry PI.
 
 ```
 # cd /tmp
@@ -11,7 +11,7 @@ alpine-rpi-3.12.0-ar 100% |*****************************************************
 'alpine-rpi-3.12.0-armhf.tar.gz' saved
 ```
 
-Mount the first (512MB) partition and extract tarball.
+### Mount the first (512MB) partition and extract tarball.
 
 ```
 # mkdir /mnt/1
@@ -28,7 +28,7 @@ Filesystem                Size      Used Available Use% Mounted on
 88.8M   /mnt/1
 ```
 
-Add ext4 filesystem to modules in cmdline.txt
+### Add ext4 filesystem to modules in cmdline.txt
 
 ```
 # cd /mnt/1
@@ -38,3 +38,18 @@ Add ext4 filesystem to modules in cmdline.txt
 > modules=loop,squashfs,sd-mod,usb-storage,ext4 quiet console=tty1
 
 
+### Optionally create a usercfg.txt
+
+https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi
+https://wiki.alpinelinux.org/wiki/Raspberry_Pi_Zero_W_-_Installation
+
+e.g. minimal GPU memory, audio, no bluetooth
+
+```
+__# cat /mnt/1/usercfg.txt__
+gpu_mem=16
+dtparam=audio=on
+dtoverlay=pi3-disable-bt
+dtoverlay=w1-gpio
+enable_uart=1
+```
