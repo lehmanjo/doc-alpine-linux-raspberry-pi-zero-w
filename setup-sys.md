@@ -80,16 +80,16 @@ Move the newly generated initramfs/boot files from root filesystem to boot files
 
 Create mountpoint for boot filesystem in root filesystem
 ```
-# mkdir /mnt/media/mmcbkl0p1
+# mkdir /mnt/media/mmcblk0p1
 ...
 ```
 
 Blindly create symlink from boot in /boot filesystem to /boot in root filesystem.  Because the filesystems are not yet mounted the way the will be mounted after the installation completes.  This symlink must be relative and won't appear as valid until after installation completes.
 ```
 # cd /mnt
-# ln -s media/mmcbkl0p1 boot
+# ln -s media/mmcblk0p1 boot
 # ls -l boot
-lrwxrwxrwx    1 root     root            15 Aug 15 13:45 boot -> media/mmcbkl0p1
+lrwxrwxrwx    1 root     root            15 Aug 15 13:45 boot -> media/mmcblk0p1
 ```
 
 Update /etc/fstab in root filesystem
