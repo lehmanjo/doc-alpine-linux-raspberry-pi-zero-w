@@ -23,7 +23,7 @@ Mem:         443568       29048      396876         168       17644      416272
 Swap:       2097148           0     2097148
 ```
 
-### Fixup WiFi.
+### Fixup WiFi
 
 Credit goes to https://wiki.alpinelinux.org/wiki/Connecting_to_a_wireless_access_point.
 
@@ -37,6 +37,53 @@ localhost:~# rc-update add wpa_supplicant boot
 localhost:~# rc-update add wpa_cli boot
  * service wpa_cli added to runlevel boot
 ```
+
+### Optional: Upgrade to bleeding "edge" 
+
+This will upgrade Alpine Linux to the "latest" build (may not be stable).  This is not required.
+
+```
+# vi /etc/apk/repositories
+...
+# cat /etc/apk/repositories
+#http://your_mirror/mirror/alpine/v3.12/main
+#http://your_mirror/mirror/alpine/v3.12/community
+http://your_mirror/mirror/alpine/edge/main
+http://your_mirror/mirror/alpine/edge/community
+http://your_mirror/mirror/alpine/edge/testing
+...
+# apk update && apk upgrade
+...
+OK: 14731 distinct packages available
+Upgrading critical system libraries and apk-tools:
+...
+(15/23) Upgrading linux-firmware-brcm (20200519-r0 -> 20200519-r1)
+(16/23) Upgrading linux-rpi (5.4.43-r0 -> 5.4.57-r0)
+...
+==> initramfs: creating /boot/initramfs-rpi
+OK: 106 MiB in 56 packages
+...
+# ls -l /boot
+lrwxrwxrwx    1 root     root            15 Aug 15 13:45 /boot -> media/mmcbkl0p1
+...
+localhost:~# ls -l /boot/
+total 10972
+-rw-r--r--    1 root     root       2442274 Aug  8 15:13 System.map-rpi
+lrwxrwxrwx    1 root     root             1 Aug 15 14:07 boot -> .
+-rw-r--r--    1 root     root        171168 Aug  8 15:13 config-rpi
+drwxr-xr-x    3 root     root          4096 Aug 15 14:06 dtbs-rpi
+-rw-------    1 root     root       3482224 Aug 15 14:07 initramfs-rpi
+-rwxr-xr-x    1 root     root       5125088 Aug  8 15:13 vmlinuz-rpi
+...
+# uname -a
+Linux localhost 5.4.43-0-rpi #1-Alpine Thu May 28 09:54:10 UTC 2020 armv6l Linux
+```
+
+Reboot to load latest kernel.
+
+
+
+
 
 
 
