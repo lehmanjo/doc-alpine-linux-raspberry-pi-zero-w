@@ -118,3 +118,7 @@ modules=loop,squashfs,sd-mod,usb-storage,ext4 root=/dev/mmcblk0p3 quiet console=
 That's it!
 
 Reboot.
+
+
+
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w)
