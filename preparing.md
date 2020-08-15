@@ -35,6 +35,6 @@ Add ext4 filesystem to cmdline.txt
 # vi cmdline.txt
 ```
 
-> modules=loop,squashfs,sd-mod,usb-storage __,ext4__ quiet console=tty1
+> modules=loop,squashfs,sd-mod,usb-storage **,ext4** quiet console=tty1
 
 
