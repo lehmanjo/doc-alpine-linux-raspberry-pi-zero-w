@@ -84,7 +84,7 @@ Create mountpoint for boot filesystem in root filesystem
 ...
 ```
 
-Blindly create symlink from boot in /boot filesystem to /boot in root filesystem.  Because the filesystems are not yet mounted the way the will be mounted after the installation completes.  This symlink must be relative and won't appear as valid until after installation completes.
+Blindly create symlink from /boot in boot filesystem to /boot in root filesystem.  Because the filesystems are not yet mounted the way the will be mounted after the installation completes.  This symlink must be relative and won't appear as valid until after installation completes.
 ```
 # cd /mnt
 # ln -s media/mmcblk0p1 boot
