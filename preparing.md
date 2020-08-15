@@ -1,5 +1,7 @@
 # Preparing the SD card (linux)
 
+These steps need to be carried out on an existing, accessible and running Linux system, preferably an Alpine Linux system.
+
 ### Download Alpine Linux
 
 Download the right tarball from https://alpinelinux.org/downloads/.  It should be **armhf** for Raspberry PI.
@@ -68,4 +70,7 @@ enable_uart=1
 
 
 You can now remove the SD card and insert it into the Raspberry PI Zero W.
+
+
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/README.md)
 
