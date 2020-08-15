@@ -1,6 +1,6 @@
-## Preparing the SD card (linux)
+# Preparing the SD card (linux)
 
-Find the micro SD card
+### Find the micro SD card
 
 ```
 # dmesg | grep mmc
@@ -10,7 +10,7 @@ Find the micro SD card
 [ 1654.720429]  mmcblk0: p1 p2 p3
 ```
 
-Partition disk (fdisk)
+### Partition disk (fdisk)
 
 ```
 # fdisk /dev/mmcblk0
