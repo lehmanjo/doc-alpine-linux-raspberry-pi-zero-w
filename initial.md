@@ -124,3 +124,4 @@ Persist changes before reboot
 Wait for Raspberry Pi Zero W to reboot.  You can then either login directly or over the network using SSH.
 
 
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w)
