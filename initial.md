@@ -58,3 +58,69 @@ Enter apk cache directory [/media/mmcblk0p1/cache]: /media/mmcblk0p1/cache
 ...
 ```
 
+### Last tweaks
+
+Check IP address on wireless interface (wlan0)
+
+```
+# ifconfig wlan0 | grep inet
+          inet addr:192.168.0.140  Bcast:0.0.0.0  Mask:255.255.255.0
+...
+```
+
+Update Alpine packages
+
+``` 
+# apk update && apk upgrade
+fetch http://your_mirror/mirror/alpine/v3.12/main/armhf/APKINDEX.tar.gz
+3.12.0 [/media/mmcblk0p1/apks]
+v3.12.0-241-g30378ef162 [http://your_mirror/mirror/alpine/v3.12/main]
+OK: 4793 distinct packages available
+OK: 19 MiB in 43 packages
+```
+
+Add e2fsprogs for filesystem utilities
+
+```
+# apk add e2fsprogs
+...
+```
+
+Temporarily enable root login via SSH.
+
+```
+# grep PermitRootLogin /etc/ssh/sshd_config
+#PermitRootLogin prohibit-password
+# the setting of "PermitRootLogin without-password".
+...
+# echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+...
+# grep PermitRootLogin /etc/ssh/sshd_config
+#PermitRootLogin prohibit-password
+# the setting of "PermitRootLogin without-password".
+PermitRootLogin yes
+```
+
+Enable WiFi during boot
+
+```
+# rc-update add wpa_supplicant boot
+...
+```
+
+Persist changes before reboot
+
+```
+# apk update && apk upgrade
+...
+# lbu_commit -v
+...
+...
+# sync
+...
+# reboot
+```
+
+Wait for Raspberry Pi Zero W to reboot.  You can then either login directly or over the network using SSH.
+
+
