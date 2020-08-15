@@ -28,13 +28,13 @@ Filesystem                Size      Used Available Use% Mounted on
 88.8M   /mnt/1
 ```
 
-Add ext4 filesystem to cmdline.txt
+Add ext4 filesystem to modules in cmdline.txt
 
 ```
 # cd /mnt/1
 # vi cmdline.txt
 ```
 
-> modules=loop,squashfs,sd-mod,usb-storage**,ext4** quiet console=tty1
+> modules=loop,squashfs,sd-mod,usb-storage,ext4 quiet console=tty1
 
 
