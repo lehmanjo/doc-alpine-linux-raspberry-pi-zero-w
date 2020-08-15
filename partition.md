@@ -21,7 +21,7 @@ l       list known partition types
 n       add a new partition
 o       create a new empty DOS partition table
 p       print the partition table
-w       **write table to disk and exit**
+w       write table to disk and exit
 
 Command (m for help): o
 ...
@@ -113,5 +113,11 @@ Device       Boot StartCHS    EndCHS        StartLBA     EndLBA    Sectors  Size
 /dev/mmcblk0p1    0,1,1       1023,3,16           16    1048591    1048576  512M  6 FAT16
 /dev/mmcblk0p2    1023,3,16   1023,3,16      1048592    5242895    4194304 2048M 82 Linux swap
 /dev/mmcblk0p3    1023,3,16   1023,3,16      5242896   62333951   57091056 27.2G 83 Linux
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table
+
+# sync
 
 ```
