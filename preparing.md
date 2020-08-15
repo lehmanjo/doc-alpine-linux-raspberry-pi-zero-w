@@ -14,3 +14,27 @@ alpine-rpi-3.12.0-ar 100% |*****************************************************
 Mount the first (512MB) partition and extract tarball.
 
 ```
+# mkdir /mnt/1
+# mount /dev/mmcblk0p1 /mnt/1
+# df -h /mnt/1
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p1          511.0M      4.0K    511.0M   0% /mnt/1
+# tar -xvzf /tmp/alpine-rpi-3.12.0-armhf.tar.gz -C /mnt/1/
+./
+./cmdline.txt
+...
+...
+# du -sh /mnt/1
+88.8M   /mnt/1
+```
+
+Add ext4 filesystem to cmdline.txt
+
+```
+# cd /mnt/1
+# vi cmdline.txt
+```
+
+> modules=loop,squashfs,sd-mod,usb-storage**,ext4** quiet console=tty1
+
+
