@@ -40,8 +40,8 @@ Filesystem                Size      Used Available Use% Mounted on
 
 ### Optionally create a usercfg.txt
 
-https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi
-https://wiki.alpinelinux.org/wiki/Raspberry_Pi_Zero_W_-_Installation
+* https://wiki.alpinelinux.org/wiki/Classic_install_or_sys_mode_on_Raspberry_Pi
+* https://wiki.alpinelinux.org/wiki/Raspberry_Pi_Zero_W_-_Installation
 
 e.g. minimal GPU memory, audio, no bluetooth
 
