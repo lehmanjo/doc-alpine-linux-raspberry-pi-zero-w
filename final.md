@@ -179,7 +179,7 @@ OK: 109 MiB in 59 packages
 * https://clang.llvm.org/
 
 ```
-$ sudo apk add clang cmake make
+$ sudo apk add clang cmake make llvm clang-dev
 ```
 
 ##### GNU C/C++
