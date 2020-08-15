@@ -17,7 +17,7 @@ alpine-rpi-3.12.0-ar 100% |*****************************************************
 
 ### Mount Partition
 
-Mount the first (512MB) partition and extract tarball.
+Mount the boot (first) partition and extract tarball.
 
 ```
 # mkdir /mnt/1
@@ -34,7 +34,7 @@ Filesystem                Size      Used Available Use% Mounted on
 
 ### Update cmdline.txt
 
-Add ext4 filesystem to modules in cmdline.txt
+Add ext4 filesystem to modules in cmdline.txt for later
 
 ```
 # cd /mnt/1
