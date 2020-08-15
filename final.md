@@ -157,5 +157,15 @@ localhost:~# vi /etc/ssh/sshd_config
 
 Reboot and login as new user (e.g. "me").
 
+```
+$ whoami
+me
+
+$ sudo uptime
+...
+[sudo] password for me:
+ 22:33:51 up 1 min,  load average: 0.67, 0.22, 0.07
+```
+
 
 
