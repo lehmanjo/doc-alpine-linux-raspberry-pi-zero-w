@@ -153,4 +153,4 @@ Writing superblocks and filesystem accounting information: done
 ```
 
 
-[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/README.md).
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/README.md)
