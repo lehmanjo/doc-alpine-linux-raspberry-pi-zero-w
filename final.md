@@ -161,10 +161,15 @@ Reboot and login as new user (e.g. "me").
 $ whoami
 me
 
-$ sudo uptime
+$ sudo whoami
 ...
 [sudo] password for me:
- 22:33:51 up 1 min,  load average: 0.67, 0.22, 0.07
+root
+
+$ sudo apk update && sudo apk upgrade
+...
+OK: 14706 distinct packages available
+OK: 109 MiB in 59 packages
 ```
 
 
