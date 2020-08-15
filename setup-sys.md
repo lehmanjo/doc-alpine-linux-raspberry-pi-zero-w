@@ -53,7 +53,68 @@ Summary of steps
 2. adjust links to boot partition
 3. tweak fstab on root filesystem
 
- 
+
+Remount boot filesystem for editing
+```
+# mount -o remount /media/mmcblk0p1/ -rw
+...
 ```
 
+Remove default boot/ directory from boot partition.
 ```
+# rm -fr /media/mmcblk0p1/boot
+...
+```
+
+Remove boot symlink from new root filesystem
+```
+# rm /mnt/boot/boot
+...
+```
+
+Move the newly generated initramfs/boot files from root filesystem to boot filesystem
+```
+# mv /mnt/boot /media/mmcblk0p1/boot
+...
+```
+
+Create mountpoint for boot filesystem in root filesystem
+```
+# mkdir /mnt/media/mmcbkl0p1
+...
+```
+
+Blindly create symlink from boot in /boot filesystem to /boot in root filesystem.  Because the filesystems are not yet mounted the way the will be mounted after the installation completes.  This symlink must be relative and won't appear as valid until after installation completes.
+```
+# cd /mnt
+# ln -s media/mmcbkl0p1 boot
+# ls -l boot
+lrwxrwxrwx    1 root     root            15 Aug 15 13:45 boot -> media/mmcbkl0p1
+```
+
+Update /etc/fstab in root filesystem
+```
+# vi /mnt/etc/fstab
+...
+# cat /mnt/etc/fstab
+/dev/mmcblk0p1 /media/mmcblk0p1 vfat defaults 0 0
+/dev/mmcblk0p2 swap  swap defaults 0 0
+/dev/mmcblk0p3 /  ext4 defaults 1 1
+/dev/cdrom /media/cdrom iso9660 noauto,ro 0 0
+/dev/usbdisk /media/usb vfat noauto 0 0
+```
+
+### Adjust root filesystem in cmdline.txt
+
+Update cmdline.txt in boot filesystem to load root filesystem from separate partition.
+
+```
+# vi /media/mmcblk0p1/cmdline.txt
+...
+# cat /media/mmcblk0p1/cmdline.txt
+modules=loop,squashfs,sd-mod,usb-storage,ext4 root=/dev/mmcblk0p3 quiet console=tty1
+```
+
+That's it!
+
+Reboot.
