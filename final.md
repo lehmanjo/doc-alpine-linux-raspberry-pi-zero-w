@@ -81,7 +81,18 @@ Linux localhost 5.4.43-0-rpi #1-Alpine Thu May 28 09:54:10 UTC 2020 armv6l Linux
 
 Reboot to load latest kernel.
 
+```
+# sync
+...
+# reboot
+```
 
+Check kernal after reboot
+
+```
+# uname -a
+Linux localhost 5.4.57-0-rpi #1-Alpine Sat Aug 8 17:24:11 UTC 2020 armv6l Linux
+```
 
 
 
