@@ -64,7 +64,7 @@ Upgrading critical system libraries and apk-tools:
 OK: 106 MiB in 56 packages
 ...
 # ls -l /boot
-lrwxrwxrwx    1 root     root            15 Aug 15 13:45 /boot -> media/mmcbkl0p1
+lrwxrwxrwx    1 root     root            15 Aug 15 13:45 /boot -> media/mmcblk0p1
 ...
 localhost:~# ls -l /boot/
 total 10972
