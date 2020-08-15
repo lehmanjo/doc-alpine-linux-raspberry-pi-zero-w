@@ -180,6 +180,20 @@ OK: 109 MiB in 59 packages
 
 ```
 $ sudo apk add clang cmake make llvm clang-dev
+
+$ clang --version
+Alpine clang version 10.0.1
+Target: armv6-alpine-linux-musleabihf
+Thread model: posix
+InstalledDir: /usr/bin
+
+$ cmake --version
+cmake version 3.18.1
+
+$ make --version
+GNU Make 4.3
+Built for armv6-alpine-linux-musleabihf
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
 ```
 
 ##### GNU C/C++
@@ -188,6 +202,18 @@ $ sudo apk add clang cmake make llvm clang-dev
 
 ```
 $ sudo apk add gcc g++ cmake make gdb
+
+$ g++ --version
+g++ (Alpine 9.3.0) 9.3.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+
+$ cmake --version
+cmake version 3.18.1
+
+$ make --version
+GNU Make 4.3
+Built for armv6-alpine-linux-musleabihf
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
 ```
 
 ##### RUST
@@ -198,5 +224,15 @@ Rust for "armhf", and Alpine Linux is easiest downloaded using "apk".
 
 ```
 $ sudo apk add rust rust-src rust-gdb rust-doc rust-dbg gcc g++ cmake make gdb cargo cargo-bash-completions cargo-doc
+
+$ rustc --version
+rustc 1.45.2
+
+$ cargo --version
+cargo 1.45.1
 ```
+
+
+
+
 
