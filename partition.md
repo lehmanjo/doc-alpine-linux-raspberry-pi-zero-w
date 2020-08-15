@@ -1,5 +1,7 @@
 # Preparing the SD card (linux)
 
+These steps need to be carried out on an existing, accessible and installed linux system with an SD card reader, preferably an Alpine Linux system.
+
 ### Find the micro SD card
 
 ```
