@@ -21,7 +21,7 @@ l       list known partition types
 n       add a new partition
 o       create a new empty DOS partition table
 p       print the partition table
-w       write table to disk and exit
+w       **write table to disk and exit**
 
 Command (m for help): o
 ...
