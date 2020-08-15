@@ -33,7 +33,7 @@ Filesystem                Size      Used Available Use% Mounted on
 
 ### Update cmdline.txt
 
-Add ext4 filesystem to modules in cmdline.txt for later
+Add ext4 filesystem support to modules in cmdline.txt for later
 
 ```
 # cd /mnt/1
