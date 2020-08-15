@@ -1,8 +1,10 @@
-# Preparing the SD card (linux)
+# Preparing the SD card
 
 These steps need to be carried out on an existing, accessible and installed linux system with an SD card reader, preferably an Alpine Linux system.
 
 ### Find the micro SD card
+
+Shows how to find the SD card device name and confirm that SD card has been detected by Linux after inserting SD card.
 
 ```
 # dmesg | grep mmc
@@ -12,7 +14,7 @@ These steps need to be carried out on an existing, accessible and installed linu
 [ 1654.720429]  mmcblk0: p1 p2 p3
 ```
 
-### Partition disk (fdisk)
+### Partition SD card 
 
 ```
 # fdisk /dev/mmcblk0
@@ -127,7 +129,7 @@ Calling ioctl() to re-read partition table
 
 ```
 
-### Format partitions (linux)
+### Format partitions
 
 ```
 # mkdosfs -F 32 /dev/mmcblk0p1
