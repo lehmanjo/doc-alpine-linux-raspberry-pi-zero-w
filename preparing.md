@@ -24,8 +24,6 @@ Mount the first (512MB) partition and extract tarball.
 Filesystem                Size      Used Available Use% Mounted on
 /dev/mmcblk0p1          511.0M      4.0K    511.0M   0% /mnt/1
 # tar -xvzf /tmp/alpine-rpi-3.12.0-armhf.tar.gz -C /mnt/1/
-./
-./cmdline.txt
 ...
 ...
 # du -sh /mnt/1
@@ -59,3 +57,15 @@ dtoverlay=pi3-disable-bt
 dtoverlay=w1-gpio
 enable_uart=1
 ```
+
+### Unmount SD Card
+
+```
+# sync
+# cd /
+# umount /mnt/1
+```
+
+
+You can now remove the SD card and insert it into the Raspberry PI Zero W.
+
