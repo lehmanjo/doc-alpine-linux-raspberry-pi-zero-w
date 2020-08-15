@@ -71,5 +71,5 @@ enable_uart=1
 You can now remove the SD card and insert it into the Raspberry PI Zero W.
 
 
-[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w/blob/master/README.md)
+[back](https://github.com/lehmanjo/doc-alpine-linux-raspberry-pi-zero-w)
 
