@@ -4,13 +4,6 @@ These steps need to be carried out on an existing, accessible and installed linu
 
 ### Find the micro SD card
 
-Example: 32GB Micro SD card
-
-1. Boot Partition (512MB) [FAT16]
-2. Swap Partition (2GB) [Swap]
-3. Root Partition (Remainder) [Ext4]
-
-
 Shows how to find the SD card device name and confirm that SD card has been detected by Linux after inserting SD card.
 
 ```
@@ -22,6 +15,13 @@ Shows how to find the SD card device name and confirm that SD card has been dete
 ```
 
 ### Partition SD card 
+
+Example: 32GB or larger Micro SD card
+
+1. Boot Partition (512MB) [FAT16]
+2. Swap Partition (2GB) [Swap]
+3. Root Partition (Remainder) [Ext4]
+
 
 ```
 # fdisk /dev/mmcblk0
