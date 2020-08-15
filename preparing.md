@@ -1,5 +1,4 @@
-# Preparing the SD card (linux)
-
+# Preparing the SD card 
 These steps need to be carried out on an existing, accessible and running Linux system, preferably an Alpine Linux system.
 
 ### Download Alpine Linux
@@ -15,7 +14,7 @@ alpine-rpi-3.12.0-ar 100% |*****************************************************
 'alpine-rpi-3.12.0-armhf.tar.gz' saved
 ```
 
-### Mount Partition
+### Mount Boot Partition
 
 Mount the boot (first) partition and extract tarball.
 
